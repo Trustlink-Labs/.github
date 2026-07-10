@@ -18,25 +18,32 @@ Our mission is simple:
 
 TrustLink Labs develops independent but interoperable infrastructure protocols.
 
-```
-                Applications
-                     ▲
-                     │
-             TrustLink Pay
-                     ▲
-                     │
-        Transfer Settlement Network
-                     ▲
-                     │
-      Transfer Identity System
-                     ▲
-                     │
-               ZK-PRU & Veil
-                     ▲
-                     │
-                 Solana
-```
+```mermaid
+flowchart TB
 
+    LAB["🏛️ TrustLink Labs"]
+
+    PAY["TrustLink Pay<br/>Reference Application"]
+
+    TSN["Transfer Settlement Network (TSN)<br/>Settlement Layer"]
+
+    TIS["Transfer Identity System (TIS)<br/>Identity Layer"]
+
+    ZK["ZK-PRU & Veil<br/>Privacy Infrastructure"]
+
+    SOL["Solana<br/>Blockchain Foundation"]
+
+    LAB --> PAY
+    LAB --> TSN
+    LAB --> TIS
+    LAB --> ZK
+
+    PAY --> TSN
+    TSN --> TIS
+    TSN --> ZK
+    ZK --> SOL
+    TIS --> SOL
+```
 Each layer solves a different problem while remaining modular enough for developers to build entirely new financial applications.
 
 ---
