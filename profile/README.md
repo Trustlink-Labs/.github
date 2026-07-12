@@ -1,92 +1,191 @@
 # TrustLink Labs
 
-# Researching the Future of Identity, Privacy, and Stablecoin Settlement
+## Researching the Future of Identity, Privacy, and Stablecoin Settlement
 
-TrustLink Labs is an AI-native blockchain infrastructure research and engineering lab focused on building open protocols for identity-first, privacy-aware digital payments.
+TrustLink Labs is an AI-assisted blockchain infrastructure research and
+engineering lab building open protocols for identity-first,
+privacy-aware digital payments.
 
-We design the infrastructure that sits beneath applications—not just payment apps themselves.
+We design the infrastructure layers beneath financial applications ---
+not just payment applications themselves.
 
-Our work combines blockchain engineering, cryptography, distributed systems, privacy research, and AI-assisted protocol development to build financial infrastructure that feels as natural as today's internet while preserving user ownership and decentralization.
+Our mission is:
 
-Our mission is simple:
+> Build the protocol stack that makes stablecoin payments as intuitive
+> as modern banking while preserving user ownership, privacy, and open
+> blockchain principles.
 
-> Build the protocol stack that makes stablecoin payments as intuitive as modern banking—without giving up the openness of blockchain.
-
----
+------------------------------------------------------------------------
 
 # What We Build
 
-TrustLink Labs develops independent but interoperable infrastructure protocols.
+TrustLink Labs develops modular and interoperable protocol
+infrastructure for the next generation of digital payments.
 
-```mermaid
+``` mermaid
 flowchart TB
 
-    LAB["🏛️ TrustLink Labs"]
+    LAB["TrustLink Labs<br/>Blockchain Infrastructure Research Lab"]
 
     PAY["TrustLink Pay<br/>Reference Application"]
 
-    TSN["Transfer Settlement Network (TSN)<br/>Settlement Layer"]
+    TIS["Transfer Identity System (TIS)<br/>Identity Infrastructure"]
 
-    TIS["Transfer Identity System (TIS)<br/>Identity Layer"]
+    TSN["Transfer Settlement Network (TSN)<br/>Settlement Infrastructure"]
 
-    ZK["ZK-PRU & Veil<br/>Privacy Infrastructure"]
+    ZK["ZK-PRU<br/>Privacy Receiving Infrastructure"]
 
-    SOL["Solana<br/>Blockchain Foundation"]
+    VEIL["Veil Privacy Protocol<br/>Confidential Stablecoin Infrastructure"]
+
+    SOL["Solana<br/>Blockchain Settlement Foundation"]
+
 
     LAB --> PAY
-    LAB --> TSN
     LAB --> TIS
+    LAB --> TSN
     LAB --> ZK
+    LAB --> VEIL
 
+
+    PAY --> TIS
     PAY --> TSN
-    TSN --> TIS
-    TSN --> ZK
-    ZK --> SOL
-    TIS --> SOL
-```
-Each layer solves a different problem while remaining modular enough for developers to build entirely new financial applications.
 
----
+    TIS -->|"CPI: Initialize PRU<br/>Create privacy receiving state<br/>Store commitment/hash"| ZK
+
+    TSN -->|"Settlement execution<br/>Uses PRU infrastructure"| ZK
+
+    ZK --> VEIL
+
+    TIS --> SOL
+    TSN --> SOL
+    ZK --> SOL
+    VEIL --> SOL
+```
+
+Each layer solves a different infrastructure problem while remaining
+modular enough for developers to build new financial applications.
+
+------------------------------------------------------------------------
 
 # Transfer Identity System (TIS)
 
-### Identity Infrastructure
+## Identity Infrastructure
 
-The Transfer Identity System replaces wallet addresses with portable payment identities.
+The Transfer Identity System creates a new identity layer for blockchain
+payments.
 
-Instead of sending money to long blockchain addresses, applications can interact through Transfer Identity Numbers (TINs) and human-readable identities while preserving blockchain ownership.
+Instead of requiring users to share long wallet addresses, applications
+can interact through portable payment identities while maintaining
+blockchain ownership.
 
 TIS provides:
 
-- 10-digit Transfer Identity Numbers
-- Identity abstraction
-- Wallet abstraction
-- Identity verification primitives
-- Encrypted identity metadata
-- Privacy-aware identity discovery
+-   Transfer Identity Numbers (TINs)
+-   Identity abstraction
+-   Wallet abstraction
+-   Identity verification primitives
+-   Encrypted identity metadata
+-   Privacy-aware identity discovery
 
----
+------------------------------------------------------------------------
 
 # Transfer Settlement Network (TSN)
 
-### Settlement Infrastructure
+## Settlement Infrastructure
 
-TSN is an intent-driven settlement network built for everyday stablecoin payments.
+The Transfer Settlement Network is an intent-driven settlement layer
+designed for everyday stablecoin payments.
 
-Rather than exposing a simple sender-wallet-to-recipient-wallet payment graph, TSN coordinates:
+TSN separates payment identity from settlement execution.
 
-- signed payment intents
-- settlement verification
-- escrow coordination
-- vault liquidity
-- Cranker execution
-- epoch accounting
+TSN coordinates:
 
-TSN separates:
+-   Signed payment intents
+-   Settlement verification
+-   Settlement execution
+-   Vault liquidity coordination
+-   Cranker execution
+-   Epoch-based accounting
 
-- identity
-- authorization
-- settlement execution
+------------------------------------------------------------------------
+
+# ZK-PRU
+
+## Privacy Receiving Infrastructure
+
+ZK-PRU introduces Privacy Receiving Units (PRUs), a privacy-aware
+receiving infrastructure designed for identity-based settlement.
+
+PRUs enable:
+
+-   Private receiving endpoints
+-   Programmable payment authorization
+-   Recurring payments
+-   Subscription infrastructure
+-   Automated payment services
+
+------------------------------------------------------------------------
+
+# Veil Privacy Protocol
+
+## Confidential Stablecoin Infrastructure
+
+Veil researches privacy-preserving stablecoin infrastructure that allows
+financial privacy while maintaining blockchain verification.
+
+Research areas include:
+
+-   Confidential balances
+-   Confidential transfers
+-   Encrypted payment metadata
+-   Privacy-preserving financial systems
+
+------------------------------------------------------------------------
+
+# TrustLink Pay
+
+## Reference Application
+
+TrustLink Pay is the first application built on the TrustLink protocol
+stack.
+
+It demonstrates how TIS, TSN, and ZK-PRU work together to create
+simplified Web3 payment experiences.
+
+------------------------------------------------------------------------
+
+# Engineering Principles
+
+## Privacy by Architecture
+
+Privacy should emerge from protocol design, not from hiding information
+inside applications.
+
+## User Ownership
+
+Infrastructure coordinates execution. Users maintain ownership of their
+identities, keys, and assets.
+
+## Modular Protocol Design
+
+Identity, authorization, privacy, settlement, and applications should
+evolve independently.
+
+## Open Infrastructure
+
+Our protocols are designed for developers, researchers, applications,
+and future contributors.
+
+------------------------------------------------------------------------
+
+# Building the Infrastructure Layer for the Next Internet of Payments
+
+Blockchain made value programmable.
+
+Stablecoins made digital money practical.
+
+TrustLink Labs is building the infrastructure that makes stablecoin
+payments intuitive, private, globally accessible, and user-owned.
 - receiving infrastructure
 
 while remaining publicly verifiable on Solana.
