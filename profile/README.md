@@ -6,6 +6,16 @@ TrustLink Labs is a research and engineering organization building the Transfer 
 
 TrustLink Labs develops protocols, SDKs, Solana programs, research papers, and reference applications. TrustLink Pay is the application experience; TSN is the network beneath it.
 
+> AI-assisted blockchain infrastructure research and
+> engineering lab building open protocols for identity-first,
+> privacy-aware digital payments.
+
+Our mission is:
+
+> Build the protocol stack that makes stablecoin payments as intuitive
+> as modern banking while preserving user ownership, privacy, and open
+> blockchain principles.
+
 ## The current architecture
 
 ```mermaid
